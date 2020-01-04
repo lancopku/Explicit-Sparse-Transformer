@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from fairseq import utils
-from fairseq.modules import LayerNorm, MultiheadAttention
+from fairseq.modules import LayerNorm, MultiheadAttention, SparseActivatedMultiheadAttention
 
 
 class TransformerEncoderLayer(nn.Module):
@@ -28,10 +28,17 @@ class TransformerEncoderLayer(nn.Module):
     def __init__(self, args):
         super().__init__()
         self.embed_dim = args.encoder_embed_dim
-        self.self_attn = MultiheadAttention(
-            self.embed_dim, args.encoder_attention_heads,
-            dropout=args.attention_dropout, self_attention=True
-        )
+
+        if args.div or args.entmax:
+            self.self_attn = SparseActivatedMultiheadAttention(
+                self.embed_dim, args.encoder_attention_heads, args=args,
+                dropout=args.attention_dropout, self_attention=True,cur_attn_type='es'
+            )
+        else:
+            self.self_attn = MultiheadAttention(
+                self.embed_dim, args.encoder_attention_heads,
+                dropout=args.attention_dropout, self_attention=True
+            )
         self.self_attn_layer_norm = LayerNorm(self.embed_dim)
         self.dropout = args.dropout
         self.activation_fn = utils.get_activation_fn(
@@ -136,14 +143,26 @@ class TransformerDecoderLayer(nn.Module):
         super().__init__()
         self.embed_dim = args.decoder_embed_dim
         self.cross_self_attention = getattr(args, 'cross_self_attention', False)
-        self.self_attn = MultiheadAttention(
+        if args.div or args.entmax:
+            self.self_attn = SparseActivatedMultiheadAttention(
+            embed_dim=self.embed_dim,
+            num_heads=args.decoder_attention_heads,
+            args=args,
+            dropout=args.attention_dropout,
+            add_bias_kv=add_bias_kv,
+            add_zero_attn=add_zero_attn,
+            self_attention=not self.cross_self_attention,
+            cur_attn_type='ds'
+            )
+        else:
+            self.self_attn = MultiheadAttention(
             embed_dim=self.embed_dim,
             num_heads=args.decoder_attention_heads,
             dropout=args.attention_dropout,
             add_bias_kv=add_bias_kv,
             add_zero_attn=add_zero_attn,
             self_attention=not self.cross_self_attention,
-        )
+            )
         self.dropout = args.dropout
         self.activation_fn = utils.get_activation_fn(
             activation=getattr(args, 'activation_fn', 'relu')
@@ -164,14 +183,26 @@ class TransformerDecoderLayer(nn.Module):
             self.encoder_attn = None
             self.encoder_attn_layer_norm = None
         else:
-            self.encoder_attn = MultiheadAttention(
-                self.embed_dim,
-                args.decoder_attention_heads,
-                kdim=getattr(args, 'encoder_embed_dim', None),
-                vdim=getattr(args, 'encoder_embed_dim', None),
-                dropout=args.attention_dropout,
-                encoder_decoder_attention=True,
-            )
+            if args.div or args.entmax:
+                self.self_attn = SparseActivatedMultiheadAttention(
+                    embed_dim=self.embed_dim,
+                    num_heads=args.decoder_attention_heads,
+                    args=args,
+                    kdim=getattr(args, 'encoder_embed_dim', None),
+                    vdim=getattr(args, 'encoder_embed_dim', None),
+                    dropout=args.attention_dropout,
+                    encoder_decoder_attention=True,
+                    cur_attn_type='ds',
+                )
+            else:
+                self.encoder_attn = MultiheadAttention(
+                    self.embed_dim,
+                    args.decoder_attention_heads,
+                    kdim=getattr(args, 'encoder_embed_dim', None),
+                    vdim=getattr(args, 'encoder_embed_dim', None),
+                    dropout=args.attention_dropout,
+                    encoder_decoder_attention=True,
+                )
             self.encoder_attn_layer_norm = LayerNorm(self.embed_dim, export=export)
 
         self.fc1 = Linear(self.embed_dim, args.decoder_ffn_embed_dim)

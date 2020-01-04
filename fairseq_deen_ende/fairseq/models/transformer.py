@@ -161,6 +161,18 @@ class TransformerModel(FairseqEncoderDecoderModel):
                             help='add layernorm to embedding')
         parser.add_argument('--no-scale-embedding', action='store_true',
                             help='if True, dont scale embeddings')
+        #  special attn select
+        parser.add_argument('--use_att', type=str, nargs='+',
+                            default=['es', 'ds', 'dc', ],
+                            help='which attn  do we apply rn or se or sp to ')
+        # sparse transformer
+        parser.add_argument('--div', type=int, default=0,
+                            help='control the attention sparsity')
+        parser.add_argument('--lb', type=int, default=0,
+                            help='the lower bound of the attention sparsity')
+
+        # entmax
+        parser.add_argument('--entmax', type=int, default=0, help='1 for sparsemax, 2 entmax15 3 entmax_bisect')
         # fmt: on
 
     @classmethod

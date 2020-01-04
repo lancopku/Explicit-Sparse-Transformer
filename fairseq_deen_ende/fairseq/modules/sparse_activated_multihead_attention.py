@@ -59,10 +59,20 @@ class SparseActivatedMultiheadAttention(nn.Module):
         self.onnx_trace = False
 
         self.enable_torch_version = False
-        if hasattr(F, "multi_head_attention_forward"):
-            self.enable_torch_version = True
+        # if hasattr(F, "multi_head_attention_forward"):
+        #     self.enable_torch_version = True
+        # else:
+        self.enable_torch_version = False
+        if cur_attn_type in args.use_att:  # es,ds,dc
+            cur_san_active = True
         else:
-            self.enable_torch_version = False
+            cur_san_active = False
+        self.cur_attn_type = cur_attn_type
+        self.args = args
+        self.div = args.div
+        self.lb = args.lb
+        self.cur_san_active = cur_san_active
+        self.entmax = args.entmax if 'entmax' in args else 0
 
 
     def prepare_for_onnx_export_(self):
@@ -232,8 +242,13 @@ class SparseActivatedMultiheadAttention(nn.Module):
             if key_padding_mask is not None:
                 key_padding_mask = torch.cat(
                     [key_padding_mask, torch.zeros(key_padding_mask.size(0), 1).type_as(key_padding_mask)], dim=1)
-
+        if not bmm_fp16_support:
+            q = q.float()
+            k = k.float()
+            v = v.float()
         attn_weights = torch.bmm(q, k.transpose(1, 2))
+        if not bmm_fp16_support:
+            attn_weights = attn_weights.type_as(query)
         attn_weights = self.apply_sparse_mask(attn_weights, tgt_len, src_len, bsz)
 
         assert list(attn_weights.size()) == [bsz * self.num_heads, tgt_len, src_len]
@@ -255,12 +270,44 @@ class SparseActivatedMultiheadAttention(nn.Module):
 
         if before_softmax:
             return attn_weights, v
-
-        attn_weights_float = utils.softmax(attn_weights, dim=-1, onnx_trace=self.onnx_trace)
+        # 1
+        if not self.cur_san_active:
+            self.div = 0
+        if self.div > 0:
+            top_k = int(torch.ceil(torch.Tensor([src_len / self.div])))
+            if top_k < self.lb:
+                top_k = self.lb
+                if top_k > src_len:
+                    top_k = src_len
+        else:
+            top_k = -self.div
+            if top_k > src_len:
+                top_k = src_len
+        # 2
+        # print('attn_weights ', attn_weights.size())
+        if self.entmax:
+            from entmax import sparsemax, entmax15, entmax_bisect
+            if self.entmax == 1:
+                attn_weights = sparsemax(attn_weights.float(), dim=-1).type_as(attn_weights)
+            elif self.entmax == 2:
+                attn_weights = entmax15(attn_weights.float(), dim=-1).type_as(attn_weights)
+            elif self.entmax == 3:
+                attn_weights_float = entmax_bisect(attn_weights.float(), dim=-1).type_as(attn_weights)
+        else:
+            if self.div:
+                vk, _ = torch.topk(attn_weights, top_k)
+                # print(value)
+                tk = vk[:, :, -1].unsqueeze(2).expand_as(attn_weights)
+                mask_k = torch.lt(attn_weights, tk)
+                attn_weights = attn_weights.masked_fill(mask_k, float('-inf')).type_as(attn_weights)
+            attn_weights_float = utils.softmax(attn_weights, dim=-1, onnx_trace=self.onnx_trace)
         attn_weights = attn_weights_float.type_as(attn_weights)
         attn_probs = F.dropout(attn_weights_float.type_as(attn_weights), p=self.dropout, training=self.training)
-
+        if not bmm_fp16_support:
+            attn_probs = attn_probs.float()  # bsz * self.num_heads, tgt_len, src_len
         attn = torch.bmm(attn_probs, v)
+        if not bmm_fp16_support:
+            attn = attn.type_as(query)
         assert list(attn.size()) == [bsz * self.num_heads, tgt_len, self.head_dim]
         if (self.onnx_trace and attn.size(1) == 1):
             # when ONNX tracing a single decoder step (sequence length == 1)

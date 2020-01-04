@@ -29,6 +29,7 @@ from .transformer_sentence_encoder import TransformerSentenceEncoder
 from .unfold import unfold1d
 from .transformer_layer import TransformerDecoderLayer, TransformerEncoderLayer
 from .vggblock import VGGBlock
+from .sparse_activated_multihead_attention import SparseActivatedMultiheadAttention
 
 __all__ = [
     'AdaptiveInput',
@@ -61,4 +62,5 @@ __all__ = [
     'TransformerEncoderLayer',
     'VGGBlock',
     'unfold1d',
+    'SparseActivatedMultiheadAttention',
 ]
