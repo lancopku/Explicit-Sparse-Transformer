@@ -2,10 +2,10 @@
 
 cd fairseq_deen_ende
 pip install --editable . --user
-# 1 generate data follow  fairseq_deen_ende/examples/translation/prepare-iwslt14.sh
+# 1 generate data following  fairseq_deen_ende/examples/translation/prepare-iwslt14.sh
 # 2 training and evaluate
 # div=-k means that you want to remain top k activations in  each row of attention matrix, if k is larger than sequence length, all activations will remain.
-# take k=-8 as an example
+# take k=8 as an example
 export CUDA_VISIBLE_DEVICES=0
 results_name=topk
 mkdir results/${results_name}
