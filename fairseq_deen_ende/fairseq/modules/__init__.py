@@ -27,9 +27,10 @@ from .sinusoidal_positional_embedding import SinusoidalPositionalEmbedding
 from .transformer_sentence_encoder_layer import TransformerSentenceEncoderLayer
 from .transformer_sentence_encoder import TransformerSentenceEncoder
 from .unfold import unfold1d
+from .sparse_activated_multihead_attention import SparseActivatedMultiheadAttention
 from .transformer_layer import TransformerDecoderLayer, TransformerEncoderLayer
 from .vggblock import VGGBlock
-from .sparse_activated_multihead_attention import SparseActivatedMultiheadAttention
+
 
 __all__ = [
     'AdaptiveInput',
