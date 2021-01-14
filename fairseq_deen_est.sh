@@ -22,6 +22,7 @@ do
      --warmup-updates 4000 --warmup-init-lr '1e-07'  --update-freq 4 --fp16 --keep-last-epochs 50 \
      --adam-betas '(0.9, 0.98)' --save-dir checkpoint/${cur_save}  --div ${div} --seed ${seed} \
      --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 |  tee  -a checkpoint/${cur_save}.txt
+    python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/checkpoint_best.pt --batch-size 128 --beam 5 --remove-bpe --quiet  > results/${results_name}/${cur_save}_best_test.txt
     for i in  50 55 60 65 70 75 80 85 90
     do
     python3 scripts/average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --checkpoint-upper-bound ${i} --output checkpoint/$cur_save/avg_${i}.pt
