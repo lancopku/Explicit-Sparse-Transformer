@@ -8,6 +8,7 @@ pip install --editable . --user
 # take k=8 as an example
 export CUDA_VISIBLE_DEVICES=0
 results_name=topk
+mkdir results
 mkdir results/${results_name}
 for div in -8
 do
@@ -23,7 +24,7 @@ do
      --log-format json --tensorboard-logdir checkpoint/${cur_save}  2>&1 |  tee  -a checkpoint/${cur_save}.txt
     for i in  50 55 60 65 70 75 80 85 90
     do
-    python3 average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --checkpoint-upper-bound ${i} --output checkpoint/$cur_save/avg_${i}.pt
+    python3 scripts/average_checkpoints.py --inputs checkpoint/$cur_save  --num-epoch-checkpoints 10 --checkpoint-upper-bound ${i} --output checkpoint/$cur_save/avg_${i}.pt
     python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/avg_${i}.pt --batch-size 128 --beam 5 --remove-bpe --quiet  > results/${results_name}/${cur_save}_avg_${i}_test.txt
     python3 generate.py data-bin/iwslt14.tokenized.de-en --path checkpoint/$cur_save/avg_${i}.pt --batch-size 128  \
     --beam 5 --remove-bpe --quiet  --gen-subset valid > results/${results_name}/${cur_save}_avg_${i}_valid.txt
