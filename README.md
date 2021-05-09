@@ -5,7 +5,7 @@ In  Explicit Sparse Transformer, we propose an algorithm which sparse attention 
 
 2021 1/14  we address an import error related to SparseActivatedMultiheadAttention
 
-2021 5/9 We find that top-k attention is additive with an adaptive local sparse attention method "Adaptive Attention Span in Transformers" https://arxiv.org/abs/1905.07799?context=cs.LG   and the top-k method can further reduce the length of the learned attention span and thus improves attention efficiency.  See the directory of 'adaptive-span'. Here is an illustration drawn from training logs: <img src="https://github.com/lancopku/Explicit-Sparse-Transformer/blob/master/adaptive-span/k-adaptive-span.png" alt="drawing" width="300"/>
+2021 5/9 In the preprint, we shown that top-k attention is additive with block sparse method "transformer-xl" which has the static local attention span. Here we find that top-k attention is also additive with an adaptive local sparse attention method "Adaptive Attention Span in Transformers" https://arxiv.org/abs/1905.07799?context=cs.LG   and the top-k method can further reduce the length of the learned attention span and thus improves attention efficiency.  See the directory of 'adaptive-span'. Here is an illustration drawn from training logs: <img src="https://github.com/lancopku/Explicit-Sparse-Transformer/blob/master/adaptive-span/k-adaptive-span.png" alt="drawing" width="400"/>
 
 
 
