@@ -1,0 +1,265 @@
+steps: 1000     train: 4.080bpc val: 2.891bpc   ms/batch: 274.1 span_avg: 35    span_max: 55
+steps: 2000     train: 2.691bpc val: 2.347bpc   ms/batch: 275.7 span_avg: 36    span_max: 93
+steps: 3000     train: 2.316bpc val: 2.119bpc   ms/batch: 280.4 span_avg: 39    span_max: 138
+steps: 4000     train: 2.137bpc val: 1.992bpc   ms/batch: 282.8 span_avg: 42    span_max: 203
+steps: 5000     train: 1.987bpc val: 1.813bpc   ms/batch: 286.0 span_avg: 45    span_max: 330
+steps: 6000     train: 1.839bpc val: 1.669bpc   ms/batch: 293.4 span_avg: 48    span_max: 460
+steps: 7000     train: 1.738bpc val: 1.611bpc   ms/batch: 300.2 span_avg: 51    span_max: 556
+steps: 8000     train: 1.675bpc val: 1.553bpc   ms/batch: 308.0 span_avg: 55    span_max: 646
+steps: 9000     train: 1.621bpc val: 1.512bpc   ms/batch: 319.4 span_avg: 60    span_max: 747
+steps: 10000    train: 1.566bpc val: 1.486bpc   ms/batch: 327.4 span_avg: 64    span_max: 850
+steps: 11000    train: 1.539bpc val: 1.462bpc   ms/batch: 338.8 span_avg: 68    span_max: 943
+steps: 12000    train: 1.516bpc val: 1.437bpc   ms/batch: 346.0 span_avg: 71    span_max: 1040
+steps: 13000    train: 1.478bpc val: 1.409bpc   ms/batch: 356.4 span_avg: 75    span_max: 1129
+steps: 14000    train: 1.460bpc val: 1.409bpc   ms/batch: 360.5 span_avg: 78    span_max: 1209
+steps: 15000    train: 1.451bpc val: 1.379bpc   ms/batch: 368.1 span_avg: 81    span_max: 1299
+steps: 16000    train: 1.420bpc val: 1.358bpc   ms/batch: 376.8 span_avg: 85    span_max: 1379
+steps: 17000    train: 1.416bpc val: 1.362bpc   ms/batch: 381.9 span_avg: 88    span_max: 1468
+steps: 18000    train: 1.395bpc val: 1.348bpc   ms/batch: 387.2 span_avg: 90    span_max: 1547
+steps: 19000    train: 1.388bpc val: 1.321bpc   ms/batch: 391.7 span_avg: 92    span_max: 1627
+steps: 20000    train: 1.380bpc val: 1.322bpc   ms/batch: 394.5 span_avg: 94    span_max: 1711
+steps: 21000    train: 1.366bpc val: 1.322bpc   ms/batch: 365.8 span_avg: 98    span_max: 1787
+steps: 22000    train: 1.353bpc val: 1.314bpc   ms/batch: 370.9 span_avg: 100   span_max: 1857
+steps: 23000    train: 1.345bpc val: 1.290bpc   ms/batch: 399.1 span_avg: 102   span_max: 1939
+steps: 24000    train: 1.346bpc val: 1.291bpc   ms/batch: 400.8 span_avg: 104   span_max: 2003
+steps: 25000    train: 1.326bpc val: 1.281bpc   ms/batch: 393.2 span_avg: 106   span_max: 2077
+steps: 26000    train: 1.329bpc val: 1.272bpc   ms/batch: 393.1 span_avg: 108   span_max: 2150
+steps: 27000    train: 1.316bpc val: 1.276bpc   ms/batch: 393.4 span_avg: 111   span_max: 2224
+steps: 28000    train: 1.315bpc val: 1.267bpc   ms/batch: 396.1 span_avg: 113   span_max: 2285
+steps: 29000    train: 1.310bpc val: 1.254bpc   ms/batch: 401.6 span_avg: 115   span_max: 2364
+steps: 30000    train: 1.295bpc val: 1.256bpc   ms/batch: 416.8 span_avg: 117   span_max: 2433
+steps: 31000    train: 1.300bpc val: 1.259bpc   ms/batch: 432.2 span_avg: 120   span_max: 2499
+steps: 32000    train: 1.298bpc val: 1.245bpc   ms/batch: 419.6 span_avg: 121   span_max: 2574
+steps: 33000    train: 1.280bpc val: 1.236bpc   ms/batch: 417.2 span_avg: 123   span_max: 2627
+steps: 34000    train: 1.278bpc val: 1.243bpc   ms/batch: 416.7 span_avg: 125   span_max: 2686
+steps: 35000    train: 1.281bpc val: 1.229bpc   ms/batch: 422.7 span_avg: 128   span_max: 2753
+steps: 36000    train: 1.261bpc val: 1.221bpc   ms/batch: 455.8 span_avg: 130   span_max: 2812
+steps: 37000    train: 1.266bpc val: 1.228bpc   ms/batch: 444.5 span_avg: 131   span_max: 2880
+steps: 38000    train: 1.254bpc val: 1.215bpc   ms/batch: 440.2 span_avg: 133   span_max: 2925
+steps: 39000    train: 1.253bpc val: 1.220bpc   ms/batch: 487.9 span_avg: 135   span_max: 2980
+steps: 40000    train: 1.242bpc val: 1.207bpc   ms/batch: 495.3 span_avg: 137   span_max: 3026
+steps: 41000    train: 1.244bpc val: 1.197bpc   ms/batch: 516.0 span_avg: 138   span_max: 3062
+steps: 42000    train: 1.245bpc val: 1.202bpc   ms/batch: 507.0 span_avg: 139   span_max: 3109
+steps: 43000    train: 1.229bpc val: 1.199bpc   ms/batch: 538.5 span_avg: 141   span_max: 3166
+steps: 44000    train: 1.235bpc val: 1.189bpc   ms/batch: 516.5 span_avg: 142   span_max: 3202
+steps: 45000    train: 1.223bpc val: 1.193bpc   ms/batch: 516.0 span_avg: 143   span_max: 3249
+steps: 46000    train: 1.227bpc val: 1.185bpc   ms/batch: 545.1 span_avg: 146   span_max: 3287
+steps: 47000    train: 1.224bpc val: 1.182bpc   ms/batch: 525.6 span_avg: 148   span_max: 3328
+steps: 48000    train: 1.210bpc val: 1.181bpc   ms/batch: 546.9 span_avg: 149   span_max: 3373
+steps: 49000    train: 1.219bpc val: 1.180bpc   ms/batch: 546.6 span_avg: 150   span_max: 3420
+steps: 50000    train: 1.216bpc val: 1.172bpc   ms/batch: 528.4 span_avg: 152   span_max: 3458
+steps: 51000    train: 1.203bpc val: 1.170bpc   ms/batch: 537.8 span_avg: 153   span_max: 3487
+steps: 52000    train: 1.205bpc val: 1.175bpc   ms/batch: 557.2 span_avg: 154   span_max: 3529
+steps: 53000    train: 1.210bpc val: 1.165bpc   ms/batch: 540.2 span_avg: 156   span_max: 3572
+steps: 54000    train: 1.194bpc val: 1.161bpc   ms/batch: 563.2 span_avg: 157   span_max: 3601
+steps: 55000    train: 1.202bpc val: 1.169bpc   ms/batch: 556.1 span_avg: 158   span_max: 3631
+steps: 56000    train: 1.192bpc val: 1.162bpc   ms/batch: 546.5 span_avg: 159   span_max: 3659
+steps: 57000    train: 1.196bpc val: 1.156bpc   ms/batch: 574.9 span_avg: 160   span_max: 3685
+steps: 58000    train: 1.195bpc val: 1.159bpc   ms/batch: 558.5 span_avg: 161   span_max: 3720
+steps: 59000    train: 1.182bpc val: 1.157bpc   ms/batch: 584.3 span_avg: 162   span_max: 3742
+steps: 60000    train: 1.191bpc val: 1.150bpc   ms/batch: 561.8 span_avg: 163   span_max: 3764
+steps: 61000    train: 1.191bpc val: 1.154bpc   ms/batch: 589.1 span_avg: 164   span_max: 3792
+steps: 62000    train: 1.176bpc val: 1.152bpc   ms/batch: 571.7 span_avg: 165   span_max: 3817
+steps: 63000    train: 1.180bpc val: 1.143bpc   ms/batch: 558.1 span_avg: 165   span_max: 3852
+steps: 49000    train: 1.219bpc val: 1.180bpc   ms/batch: 546.6 span_avg: 150   span_max: 3420
+steps: 50000    train: 1.216bpc val: 1.172bpc   ms/batch: 528.4 span_avg: 152   span_max: 3458
+steps: 51000    train: 1.203bpc val: 1.170bpc   ms/batch: 537.8 span_avg: 153   span_max: 3487
+steps: 52000    train: 1.205bpc val: 1.175bpc   ms/batch: 557.2 span_avg: 154   span_max: 3529
+steps: 53000    train: 1.210bpc val: 1.165bpc   ms/batch: 540.2 span_avg: 156   span_max: 3572
+steps: 54000    train: 1.194bpc val: 1.161bpc   ms/batch: 563.2 span_avg: 157   span_max: 3601
+steps: 55000    train: 1.202bpc val: 1.169bpc   ms/batch: 556.1 span_avg: 158   span_max: 3631
+steps: 56000    train: 1.192bpc val: 1.162bpc   ms/batch: 546.5 span_avg: 159   span_max: 3659
+steps: 57000    train: 1.196bpc val: 1.156bpc   ms/batch: 574.9 span_avg: 160   span_max: 3685
+steps: 58000    train: 1.195bpc val: 1.159bpc   ms/batch: 558.5 span_avg: 161   span_max: 3720
+steps: 59000    train: 1.182bpc val: 1.157bpc   ms/batch: 584.3 span_avg: 162   span_max: 3742
+steps: 60000    train: 1.191bpc val: 1.150bpc   ms/batch: 561.8 span_avg: 163   span_max: 3764
+steps: 61000    train: 1.191bpc val: 1.154bpc   ms/batch: 589.1 span_avg: 164   span_max: 3792
+steps: 62000    train: 1.176bpc val: 1.152bpc   ms/batch: 571.7 span_avg: 165   span_max: 3817
+steps: 63000    train: 1.180bpc val: 1.143bpc   ms/batch: 558.1 span_avg: 165   span_max: 3852
+steps: 64000    train: 1.186bpc val: 1.151bpc   ms/batch: 595.0 span_avg: 166   span_max: 3878
+steps: 65000    train: 1.171bpc val: 1.151bpc   ms/batch: 573.9 span_avg: 167   span_max: 3903
+steps: 66000    train: 1.180bpc val: 1.142bpc   ms/batch: 563.6 span_avg: 167   span_max: 3907
+steps: 67000    train: 1.169bpc val: 1.143bpc   ms/batch: 595.9 span_avg: 168   span_max: 3931
+steps: 68000    train: 1.174bpc val: 1.149bpc   ms/batch: 576.8 span_avg: 169   span_max: 3945
+steps: 69000    train: 1.174bpc val: 1.132bpc   ms/batch: 565.1 span_avg: 169   span_max: 3957
+steps: 70000    train: 1.162bpc val: 1.143bpc   ms/batch: 588.6 span_avg: 169   span_max: 3975
+steps: 71000    train: 1.170bpc val: 1.147bpc   ms/batch: 591.9 span_avg: 170   span_max: 4009
+steps: 72000    train: 1.172bpc val: 1.131bpc   ms/batch: 573.7 span_avg: 171   span_max: 4044
+steps: 73000    train: 1.157bpc val: 1.136bpc   ms/batch: 602.5 span_avg: 171   span_max: 4064
+steps: 74000    train: 1.160bpc val: 1.143bpc   ms/batch: 589.3 span_avg: 172   span_max: 4089
+steps: 75000    train: 1.169bpc val: 1.128bpc   ms/batch: 586.8 span_avg: 174   span_max: 4107
+steps: 76000    train: 1.153bpc val: 1.130bpc   ms/batch: 618.8 span_avg: 174   span_max: 4129
+steps: 77000    train: 1.164bpc val: 1.141bpc   ms/batch: 590.6 span_avg: 174   span_max: 4156
+steps: 78000    train: 1.152bpc val: 1.127bpc   ms/batch: 593.1 span_avg: 175   span_max: 4186
+steps: 79000    train: 1.157bpc val: 1.128bpc   ms/batch: 617.1 span_avg: 176   span_max: 4205
+steps: 68000    train: 1.174bpc val: 1.149bpc   ms/batch: 576.8 span_avg: 169   span_max: 3945
+steps: 69000    train: 1.174bpc val: 1.132bpc   ms/batch: 565.1 span_avg: 169   span_max: 3957
+steps: 70000    train: 1.162bpc val: 1.143bpc   ms/batch: 588.6 span_avg: 169   span_max: 3975
+steps: 71000    train: 1.170bpc val: 1.147bpc   ms/batch: 591.9 span_avg: 170   span_max: 4009
+steps: 72000    train: 1.172bpc val: 1.131bpc   ms/batch: 573.7 span_avg: 171   span_max: 4044
+steps: 73000    train: 1.157bpc val: 1.136bpc   ms/batch: 602.5 span_avg: 171   span_max: 4064
+steps: 74000    train: 1.160bpc val: 1.143bpc   ms/batch: 589.3 span_avg: 172   span_max: 4089
+steps: 75000    train: 1.169bpc val: 1.128bpc   ms/batch: 586.8 span_avg: 174   span_max: 4107
+steps: 76000    train: 1.153bpc val: 1.130bpc   ms/batch: 618.8 span_avg: 174   span_max: 4129
+steps: 77000    train: 1.164bpc val: 1.141bpc   ms/batch: 590.6 span_avg: 174   span_max: 4156
+steps: 78000    train: 1.152bpc val: 1.127bpc   ms/batch: 593.1 span_avg: 175   span_max: 4186
+steps: 79000    train: 1.157bpc val: 1.128bpc   ms/batch: 617.1 span_avg: 176   span_max: 4205
+steps: 80000    train: 1.159bpc val: 1.137bpc   ms/batch: 587.8 span_avg: 176   span_max: 4217
+steps: 81000    train: 1.145bpc val: 1.129bpc   ms/batch: 583.8 span_avg: 177   span_max: 4241
+steps: 82000    train: 1.156bpc val: 1.125bpc   ms/batch: 616.5 span_avg: 178   span_max: 4271
+steps: 83000    train: 1.157bpc val: 1.131bpc   ms/batch: 594.7 span_avg: 178   span_max: 4297
+steps: 84000    train: 1.141bpc val: 1.126bpc   ms/batch: 587.6 span_avg: 178   span_max: 4320
+steps: 85000    train: 1.145bpc val: 1.121bpc   ms/batch: 583.5 span_avg: 179   span_max: 4342
+steps: 86000    train: 1.154bpc val: 1.129bpc   ms/batch: 603.7 span_avg: 179   span_max: 4350
+steps: 87000    train: 1.139bpc val: 1.125bpc   ms/batch: 611.6 span_avg: 180   span_max: 4368
+steps: 88000    train: 1.150bpc val: 1.116bpc   ms/batch: 591.7 span_avg: 180   span_max: 4385
+steps: 89000    train: 1.138bpc val: 1.124bpc   ms/batch: 588.5 span_avg: 181   span_max: 4395
+steps: 90000    train: 1.144bpc val: 1.120bpc   ms/batch: 586.4 span_avg: 181   span_max: 4408
+steps: 79000    train: 1.157bpc val: 1.128bpc   ms/batch: 617.1 span_avg: 176   span_max: 4205
+steps: 80000    train: 1.159bpc val: 1.137bpc   ms/batch: 587.8 span_avg: 176   span_max: 4217
+steps: 81000    train: 1.145bpc val: 1.129bpc   ms/batch: 583.8 span_avg: 177   span_max: 4241
+steps: 82000    train: 1.156bpc val: 1.125bpc   ms/batch: 616.5 span_avg: 178   span_max: 4271
+steps: 80000    train: 1.159bpc val: 1.137bpc   ms/batch: 587.8 span_avg: 176   span_max: 4217
+steps: 81000    train: 1.145bpc val: 1.129bpc   ms/batch: 583.8 span_avg: 177   span_max: 4241
+steps: 82000    train: 1.156bpc val: 1.125bpc   ms/batch: 616.5 span_avg: 178   span_max: 4271
+steps: 83000    train: 1.157bpc val: 1.131bpc   ms/batch: 594.7 span_avg: 178   span_max: 4297
+steps: 84000    train: 1.141bpc val: 1.126bpc   ms/batch: 587.6 span_avg: 178   span_max: 4320
+steps: 85000    train: 1.145bpc val: 1.121bpc   ms/batch: 583.5 span_avg: 179   span_max: 4342
+steps: 86000    train: 1.154bpc val: 1.129bpc   ms/batch: 603.7 span_avg: 179   span_max: 4350
+steps: 87000    train: 1.139bpc val: 1.125bpc   ms/batch: 611.6 span_avg: 180   span_max: 4368
+steps: 88000    train: 1.150bpc val: 1.116bpc   ms/batch: 591.7 span_avg: 180   span_max: 4385
+steps: 89000    train: 1.138bpc val: 1.124bpc   ms/batch: 588.5 span_avg: 181   span_max: 4395
+steps: 90000    train: 1.144bpc val: 1.120bpc   ms/batch: 586.4 span_avg: 181   span_max: 4408
+steps: 91000    train: 1.146bpc val: 1.116bpc   ms/batch: 594.6 span_avg: 182   span_max: 4422
+steps: 92000    train: 1.132bpc val: 1.124bpc   ms/batch: 623.4 span_avg: 183   span_max: 4435
+steps: 93000    train: 1.143bpc val: 1.119bpc   ms/batch: 600.2 span_avg: 183   span_max: 4445
+steps: 94000    train: 1.146bpc val: 1.113bpc   ms/batch: 596.2 span_avg: 183   span_max: 4461
+steps: 95000    train: 1.129bpc val: 1.120bpc   ms/batch: 591.0 span_avg: 183   span_max: 4471
+steps: 96000    train: 1.134bpc val: 1.117bpc   ms/batch: 629.3 span_avg: 184   span_max: 4478
+steps: 90000    train: 1.144bpc val: 1.120bpc   ms/batch: 586.4 span_avg: 181   span_max: 4408
+steps: 91000    train: 1.146bpc val: 1.116bpc   ms/batch: 594.6 span_avg: 182   span_max: 4422
+steps: 92000    train: 1.132bpc val: 1.124bpc   ms/batch: 623.4 span_avg: 183   span_max: 4435
+steps: 93000    train: 1.143bpc val: 1.119bpc   ms/batch: 600.2 span_avg: 183   span_max: 4445
+steps: 94000    train: 1.146bpc val: 1.113bpc   ms/batch: 596.2 span_avg: 183   span_max: 4461
+steps: 95000    train: 1.129bpc val: 1.120bpc   ms/batch: 591.0 span_avg: 183   span_max: 4471
+steps: 96000    train: 1.134bpc val: 1.117bpc   ms/batch: 629.3 span_avg: 184   span_max: 4478
+steps: 97000    train: 1.141bpc val: 1.111bpc   ms/batch: 612.9 span_avg: 184   span_max: 4480
+steps: 98000    train: 1.129bpc val: 1.112bpc   ms/batch: 602.2 span_avg: 184   span_max: 4485
+steps: 99000    train: 1.138bpc val: 1.117bpc   ms/batch: 598.9 span_avg: 185   span_max: 4483
+steps: 100000   train: 1.127bpc val: 1.114bpc   ms/batch: 593.5 span_avg: 185   span_max: 4485
+steps: 101000   train: 1.133bpc val: 1.111bpc   ms/batch: 590.0 span_avg: 185   span_max: 4480
+steps: 102000   train: 1.135bpc val: 1.117bpc   ms/batch: 628.2 span_avg: 185   span_max: 4489
+steps: 103000   train: 1.128bpc val: 1.122bpc   ms/batch: 603.9 span_avg: 186   span_max: 4487
+steps: 104000   train: 1.127bpc val: 1.113bpc   ms/batch: 602.4 span_avg: 186   span_max: 4493
+steps: 105000   train: 1.127bpc val: 1.120bpc   ms/batch: 620.4 span_avg: 186   span_max: 4492
+steps: 106000   train: 1.121bpc val: 1.114bpc   ms/batch: 636.6 span_avg: 186   span_max: 4496
+steps: 107000   train: 1.129bpc val: 1.105bpc   ms/batch: 613.9 span_avg: 186   span_max: 4492
+steps: 108000   train: 1.131bpc val: 1.112bpc   ms/batch: 631.9 span_avg: 187   span_max: 4497
+steps: 109000   train: 1.119bpc val: 1.110bpc   ms/batch: 617.0 span_avg: 188   span_max: 4493
+steps: 110000   train: 1.128bpc val: 1.103bpc   ms/batch: 632.2 span_avg: 187   span_max: 4495
+steps: 111000   train: 1.119bpc val: 1.109bpc   ms/batch: 619.0 span_avg: 187   span_max: 4495
+steps: 112000   train: 1.126bpc val: 1.107bpc   ms/batch: 612.0 span_avg: 188   span_max: 4496
+steps: 113000   train: 1.124bpc val: 1.101bpc   ms/batch: 636.1 span_avg: 187   span_max: 4496
+steps: 114000   train: 1.114bpc val: 1.106bpc   ms/batch: 610.9 span_avg: 188   span_max: 4500
+steps: 115000   train: 1.126bpc val: 1.108bpc   ms/batch: 640.6 span_avg: 187   span_max: 4502
+steps: 116000   train: 1.123bpc val: 1.102bpc   ms/batch: 616.3 span_avg: 188   span_max: 4499
+steps: 109000   train: 1.119bpc val: 1.110bpc   ms/batch: 617.0 span_avg: 188   span_max: 4493
+steps: 110000   train: 1.128bpc val: 1.103bpc   ms/batch: 632.2 span_avg: 187   span_max: 4495
+steps: 111000   train: 1.119bpc val: 1.109bpc   ms/batch: 619.0 span_avg: 187   span_max: 4495
+steps: 112000   train: 1.126bpc val: 1.107bpc   ms/batch: 612.0 span_avg: 188   span_max: 4496
+steps: 113000   train: 1.124bpc val: 1.101bpc   ms/batch: 636.1 span_avg: 187   span_max: 4496
+steps: 114000   train: 1.114bpc val: 1.106bpc   ms/batch: 610.9 span_avg: 188   span_max: 4500
+steps: 115000   train: 1.126bpc val: 1.108bpc   ms/batch: 640.6 span_avg: 187   span_max: 4502
+steps: 116000   train: 1.123bpc val: 1.102bpc   ms/batch: 616.3 span_avg: 188   span_max: 4499
+steps: 117000   train: 1.112bpc val: 1.102bpc   ms/batch: 607.6 span_avg: 188   span_max: 4503
+steps: 118000   train: 1.118bpc val: 1.106bpc   ms/batch: 641.4 span_avg: 189   span_max: 4501
+steps: 119000   train: 1.124bpc val: 1.101bpc   ms/batch: 618.0 span_avg: 188   span_max: 4501
+steps: 120000   train: 1.110bpc val: 1.097bpc   ms/batch: 607.1 span_avg: 189   span_max: 4498
+steps: 121000   train: 1.120bpc val: 1.109bpc   ms/batch: 631.1 span_avg: 189   span_max: 4499
+steps: 122000   train: 1.111bpc val: 1.102bpc   ms/batch: 627.7 span_avg: 190   span_max: 4502
+steps: 111000   train: 1.119bpc val: 1.109bpc   ms/batch: 619.0 span_avg: 187   span_max: 4495
+steps: 112000   train: 1.126bpc val: 1.107bpc   ms/batch: 612.0 span_avg: 188   span_max: 4496
+steps: 113000   train: 1.124bpc val: 1.101bpc   ms/batch: 636.1 span_avg: 187   span_max: 4496
+steps: 114000   train: 1.114bpc val: 1.106bpc   ms/batch: 610.9 span_avg: 188   span_max: 4500
+steps: 115000   train: 1.126bpc val: 1.108bpc   ms/batch: 640.6 span_avg: 187   span_max: 4502
+steps: 116000   train: 1.123bpc val: 1.102bpc   ms/batch: 616.3 span_avg: 188   span_max: 4499
+steps: 117000   train: 1.112bpc val: 1.102bpc   ms/batch: 607.6 span_avg: 188   span_max: 4503
+steps: 118000   train: 1.118bpc val: 1.106bpc   ms/batch: 641.4 span_avg: 189   span_max: 4501
+steps: 119000   train: 1.124bpc val: 1.101bpc   ms/batch: 618.0 span_avg: 188   span_max: 4501
+steps: 120000   train: 1.110bpc val: 1.097bpc   ms/batch: 607.1 span_avg: 189   span_max: 4498
+steps: 121000   train: 1.120bpc val: 1.109bpc   ms/batch: 631.1 span_avg: 189   span_max: 4499
+steps: 122000   train: 1.111bpc val: 1.102bpc   ms/batch: 627.7 span_avg: 190   span_max: 4502
+steps: 123000   train: 1.117bpc val: 1.095bpc   ms/batch: 614.1 span_avg: 189   span_max: 4498
+steps: 124000   train: 1.117bpc val: 1.104bpc   ms/batch: 612.7 span_avg: 189   span_max: 4499
+steps: 125000   train: 1.106bpc val: 1.101bpc   ms/batch: 649.0 span_avg: 190   span_max: 4501
+steps: 126000   train: 1.117bpc val: 1.094bpc   ms/batch: 629.8 span_avg: 190   span_max: 4501
+steps: 127000   train: 1.117bpc val: 1.101bpc   ms/batch: 618.3 span_avg: 190   span_max: 4497
+steps: 128000   train: 1.104bpc val: 1.102bpc   ms/batch: 613.6 span_avg: 191   span_max: 4504
+steps: 129000   train: 1.110bpc val: 1.094bpc   ms/batch: 612.5 span_avg: 191   span_max: 4499
+steps: 130000   train: 1.117bpc val: 1.101bpc   ms/batch: 611.5 span_avg: 191   span_max: 4503
+steps: 131000   train: 1.103bpc val: 1.102bpc   ms/batch: 608.7 span_avg: 191   span_max: 4499
+steps: 132000   train: 1.114bpc val: 1.088bpc   ms/batch: 606.7 span_avg: 192   span_max: 4501
+steps: 133000   train: 1.104bpc val: 1.098bpc   ms/batch: 605.1 span_avg: 192   span_max: 4503
+steps: 134000   train: 1.110bpc val: 1.099bpc   ms/batch: 608.8 span_avg: 193   span_max: 4503
+steps: 135000   train: 1.111bpc val: 1.091bpc   ms/batch: 609.6 span_avg: 192   span_max: 4502
+steps: 136000   train: 1.100bpc val: 1.097bpc   ms/batch: 609.2 span_avg: 192   span_max: 4502
+steps: 137000   train: 1.110bpc val: 1.101bpc   ms/batch: 609.0 span_avg: 193   span_max: 4505
+steps: 138000   train: 1.111bpc val: 1.086bpc   ms/batch: 610.1 span_avg: 192   span_max: 4502
+steps: 123000   train: 1.117bpc val: 1.095bpc   ms/batch: 614.1 span_avg: 189   span_max: 4498
+steps: 124000   train: 1.117bpc val: 1.104bpc   ms/batch: 612.7 span_avg: 189   span_max: 4499
+steps: 125000   train: 1.106bpc val: 1.101bpc   ms/batch: 649.0 span_avg: 190   span_max: 4501
+steps: 126000   train: 1.117bpc val: 1.094bpc   ms/batch: 629.8 span_avg: 190   span_max: 4501
+steps: 127000   train: 1.117bpc val: 1.101bpc   ms/batch: 618.3 span_avg: 190   span_max: 4497
+steps: 128000   train: 1.104bpc val: 1.102bpc   ms/batch: 613.6 span_avg: 191   span_max: 4504
+steps: 129000   train: 1.110bpc val: 1.094bpc   ms/batch: 612.5 span_avg: 191   span_max: 4499
+steps: 128000   train: 1.104bpc val: 1.102bpc   ms/batch: 613.6 span_avg: 191   span_max: 4504
+steps: 129000   train: 1.110bpc val: 1.094bpc   ms/batch: 612.5 span_avg: 191   span_max: 4499
+steps: 130000   train: 1.117bpc val: 1.101bpc   ms/batch: 611.5 span_avg: 191   span_max: 4503
+steps: 131000   train: 1.103bpc val: 1.102bpc   ms/batch: 608.7 span_avg: 191   span_max: 4499
+steps: 132000   train: 1.114bpc val: 1.088bpc   ms/batch: 606.7 span_avg: 192   span_max: 4501
+steps: 133000   train: 1.104bpc val: 1.098bpc   ms/batch: 605.1 span_avg: 192   span_max: 4503
+steps: 134000   train: 1.110bpc val: 1.099bpc   ms/batch: 608.8 span_avg: 193   span_max: 4503
+steps: 135000   train: 1.111bpc val: 1.091bpc   ms/batch: 609.6 span_avg: 192   span_max: 4502
+steps: 136000   train: 1.100bpc val: 1.097bpc   ms/batch: 609.2 span_avg: 192   span_max: 4502
+steps: 137000   train: 1.110bpc val: 1.101bpc   ms/batch: 609.0 span_avg: 193   span_max: 4505
+steps: 138000   train: 1.111bpc val: 1.086bpc   ms/batch: 610.1 span_avg: 192   span_max: 4502
+steps: 139000   train: 1.097bpc val: 1.093bpc   ms/batch: 608.8 span_avg: 193   span_max: 4500
+steps: 140000   train: 1.103bpc val: 1.101bpc   ms/batch: 607.3 span_avg: 193   span_max: 4500
+steps: 141000   train: 1.111bpc val: 1.087bpc   ms/batch: 608.4 span_avg: 193   span_max: 4502
+steps: 142000   train: 1.097bpc val: 1.093bpc   ms/batch: 610.0 span_avg: 193   span_max: 4502
+steps: 143000   train: 1.108bpc val: 1.100bpc   ms/batch: 612.3 span_avg: 193   span_max: 4500
+steps: 144000   train: 1.097bpc val: 1.093bpc   ms/batch: 611.5 span_avg: 193   span_max: 4500
+steps: 145000   train: 1.104bpc val: 1.087bpc   ms/batch: 611.2 span_avg: 194   span_max: 4502
+steps: 146000   train: 1.105bpc val: 1.099bpc   ms/batch: 610.1 span_avg: 194   span_max: 4497
+steps: 147000   train: 1.093bpc val: 1.092bpc   ms/batch: 611.2 span_avg: 194   span_max: 4502
+
+
+k=8
+100 1.314
+130 1.22
+160 1.156
+190 1.10
+
+100 1.314
+120 1.26
+130 1.22
+140 1.20
+150 1.180
+160 1.156
+170 1.147
+180 1.12
+190 1.10
+
+
+
+1.199 141
+1.189 142
+1.18 150
+1.17 153
+1.161 157
+1.150 163
+1.142 167
+1.13 174
+1.12 181
+1.11 188
+1.100 193
