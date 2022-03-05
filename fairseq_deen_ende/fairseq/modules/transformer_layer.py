@@ -184,7 +184,7 @@ class TransformerDecoderLayer(nn.Module):
             self.encoder_attn_layer_norm = None
         else:
             if args.div or args.entmax:
-                self.self_attn = SparseActivatedMultiheadAttention(
+                self.encoder_attn = SparseActivatedMultiheadAttention(
                     embed_dim=self.embed_dim,
                     num_heads=args.decoder_attention_heads,
                     args=args,
@@ -192,7 +192,7 @@ class TransformerDecoderLayer(nn.Module):
                     vdim=getattr(args, 'encoder_embed_dim', None),
                     dropout=args.attention_dropout,
                     encoder_decoder_attention=True,
-                    cur_attn_type='ds',
+                    cur_attn_type='dc',
                 )
             else:
                 self.encoder_attn = MultiheadAttention(
