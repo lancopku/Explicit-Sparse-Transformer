@@ -169,7 +169,7 @@ class TransformerModel(FairseqEncoderDecoderModel):
         parser.add_argument('--div', type=int, default=0,
                             help='control the attention sparsity, 1. div<0, select top -div elements. 2 div>0 select seq_len/div elements. 3. div=0 do not sparsify')
         parser.add_argument('--lb', type=int, default=0,
-                            help='the lower bound of the attention sparsity')
+                            help='the lower bound of the attention sparsity, minimum selected positions')
 
         # entmax
         parser.add_argument('--entmax', type=int, default=0, help='1 for sparsemax, 2 entmax15 3 entmax_bisect')
