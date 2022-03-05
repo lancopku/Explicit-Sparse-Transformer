@@ -164,10 +164,10 @@ class TransformerModel(FairseqEncoderDecoderModel):
         #  special attn select
         parser.add_argument('--use_att', type=str, nargs='+',
                             default=['es', 'ds', 'dc', ],
-                            help='which attn  do we apply rn or se or sp to ')
+                            help='which attn to sparsify')
         # sparse transformer
         parser.add_argument('--div', type=int, default=0,
-                            help='control the attention sparsity')
+                            help='control the attention sparsity, 1. div<0, select top -div elements. 2 div>0 select seq_len/div elements. 3. div=0 do not sparsify')
         parser.add_argument('--lb', type=int, default=0,
                             help='the lower bound of the attention sparsity')
 
