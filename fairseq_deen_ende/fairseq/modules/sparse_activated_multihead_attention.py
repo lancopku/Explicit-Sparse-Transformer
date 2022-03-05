@@ -288,9 +288,9 @@ class SparseActivatedMultiheadAttention(nn.Module):
         if self.entmax:
             from entmax import sparsemax, entmax15, entmax_bisect
             if self.entmax == 1:
-                attn_weights = sparsemax(attn_weights.float(), dim=-1).type_as(attn_weights)
+                attn_weights_float = sparsemax(attn_weights.float(), dim=-1).type_as(attn_weights)
             elif self.entmax == 2:
-                attn_weights = entmax15(attn_weights.float(), dim=-1).type_as(attn_weights)
+                attn_weights_float = entmax15(attn_weights.float(), dim=-1).type_as(attn_weights)
             elif self.entmax == 3:
                 attn_weights_float = entmax_bisect(attn_weights.float(), dim=-1).type_as(attn_weights)
         else:
